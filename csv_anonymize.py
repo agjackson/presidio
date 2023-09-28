@@ -5,22 +5,6 @@ from typing import List, Iterable, Optional
 from presidio_analyzer import BatchAnalyzerEngine, DictAnalyzerResult
 from presidio_anonymizer import BatchAnonymizerEngine
 
-"""
-Example implementing a CSV analyzer
-
-This example shows how to use the Presidio Analyzer and Anonymizer
-to detect and anonymize PII in a CSV file.
-It uses the BatchAnalyzerEngine to analyze the CSV file, and 
-BatchAnonymizerEngine to anonymize the requested columns.
-
-Content of csv file:
-id,name,city,comments
-1,John,New York,called him yesterday to confirm he requested to call back in 2 days
-2,Jill,Los Angeles,accepted the offer license number AC432223
-3,Jack,Chicago,need to call him at phone number 212-555-5555
-
-"""
-
 
 class CSVAnalyzer(BatchAnalyzerEngine):
 
@@ -42,7 +26,7 @@ class CSVAnalyzer(BatchAnalyzerEngine):
 if __name__ == "__main__":
 
     analyzer = CSVAnalyzer()
-    analyzer_results = analyzer.analyze_csv('./csv_sample_data/sample_data.csv',
+    analyzer_results = analyzer.analyze_csv('/Users/arlenagjackson/Downloads/random_sample_Aran_1_manchester_redaction_annotation.csv',
                                             language="en")
     pprint.pprint(analyzer_results)
 
