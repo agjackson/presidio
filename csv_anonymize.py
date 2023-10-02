@@ -12,7 +12,7 @@ class CSVAnalyzer(BatchAnalyzerEngine):
         self,
         csv_full_path: str,
         language: str,
-        keys_to_skip: Optional[List[str]] = None,
+        keys_to_skip: Optional[List[str]] = ['','speaker_col','annotated_col'],
         **kwargs,
     ) -> Iterable[DictAnalyzerResult]:
 
